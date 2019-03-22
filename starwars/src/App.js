@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+
 import './App.css';
+
+
+import Chars from './components/Chars';
+
 
 class App extends Component {
   constructor() {
@@ -33,6 +38,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        {this.state.starwarsChars.map ((character, index) =>  <Chars key=
+        {index} character={character} />)} 
+
       </div>
     );
   }
